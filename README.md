@@ -3,26 +3,24 @@ Would like to know the reason behind sudden failure of Velero backup in our Azur
 Pasting the import gist of command output followed by,
 
 kubectl logs deployment/velero -n velero
+
 velero backup describe or kubectl get backup/ -n velero -o yaml
+
 velero backup logs
-k logs -n velero
+
+k logs <velero_pod> -n velero
+
 (https://github.com/RJ-Kamalesh/Velero_Partially-Failed/files/10674316/eastus_vto.txt) 
 
-Would like to know the reason behind sudden failure of Velero backup in our Azure Kubernetes cluster.
-
-Pasting the import gist of command output followed by,
-
-kubectl logs deployment/velero -n velero
-velero backup describe or kubectl get backup/ -n velero -o yaml
-velero backup logs
-k logs -n velero
 
 Environment:
 
 Velero version (use velero version) : v1.9.5
+
 Microsoft plugins of velero : v1.5.3
 
 Kubernetes version : Server version v1.23.12 , Client version v1.23.4
+
 Cloud Provider : Azure
 
  <img width="509" alt="velero_get_backup" src="https://user-images.githubusercontent.com/124659220/217228730-188a6ce8-fa34-466a-9017-46f74305707b.PNG">
@@ -42,6 +40,6 @@ time="2023-02-07T08:13:39Z" level=info msg="Validating BackupStorageLocation" ba
 
 - time="2023-02-07T08:13:39Z" level=error msg="Current BackupStorageLocations available/unavailable/unknown: 0/1/0)" controller=backup-storage-location 
 
-�]0;root@UK-AZR-PUSREJ01: �root@UK-AZR-PUSREJ01:#
+
 
 <img width="676" alt="restic_logs" src="https://user-images.githubusercontent.com/124659220/217238997-3c5fde97-7095-4bb6-bb57-1b9a2677dc60.PNG">
