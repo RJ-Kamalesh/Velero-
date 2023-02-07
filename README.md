@@ -19,7 +19,8 @@ k logs -n velero
 Environment:
 
 Velero version (use velero version) : v1.9.5
-Microsoft plugins of velero : v1.5.3
+Microsoft plugins of velero : v1.5.3[eastus_vto.txt](https://github.com/RJ-Kamalesh/Velero_Partially-Failed/files/10674316/eastus_vto.txt)
+
 Kubernetes version : Server version v1.23.12 , Client version v1.23.4
 Cloud Provider : Azure
 
